@@ -1,0 +1,11 @@
+use test_db_1;
+create table student(
+student_id int,student_name varchar(20) not null, age int not null,primary key(student_id)
+ );
+ insert into student values(10,'vijay',22);
+ 
+ show tables;
+ select * from student;
+ alter table student 
+ add student_blood_grp varchar(5) not null;
+ update student set student_blood_grp='AB-' where student_id=10;

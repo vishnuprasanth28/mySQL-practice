@@ -1,0 +1,16 @@
+use test_db_1;
+create table car_info(car_id int auto_increment,
+car_color varchar(10) not null,
+registration_no varchar(20) not null,
+ car_variant varchar(10) not null,
+ max_speed int ,
+ primary key(car_id),
+ unique(registration_no)
+);
+drop table Car_info;
+insert into car_info values (2,'blue','TN 59 cc 1122','diesel',250),(3,'black','TN 59 cc 1234','electric',250),(4,'yellow','TN 59 cc 1244','petrol',180);
+select * from car_info;
+select max_speed>200 from car_info;
+select * from car_info order by car_color asc;
+select * from car_info where max_speed > 200;
+select * from car_info where max_speed between 200 and 250;
